@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Admin Web Application</title>
+<link rel="icon" type="image/x-icon" th:href="@{/images/logo.jpg}">
+<style th:replace="views/resource-loader::css-loader"></style>
+<script th:replace="views/resource-loader::js-loader"></script>
+</head>
+<body>
+	<div th:replace="ui-elements/loading::loader-circle">
+	</div>
+	
+	<div id="content-container">
+		<div th:replace="ui-elements/login::login-form">
+		</div>
+	</div>
+</body>
+</html>

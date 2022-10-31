@@ -1,0 +1,53 @@
+#loading-container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	background-color: #aadef16e;
+	min-height: 100vh!important;
+	transition: 2s ease-in-out;
+}
+
+#loading-wrapper {
+    height: 50px;
+    transform-origin: bottom center;
+    animation: loading-rotate 3s linear infinite;
+}
+
+.loading-circle {
+	display: inline-block;
+	background-color: #00aeef;
+	height: 40px;
+	width: 40px;
+	border-radius: 50%;
+	animation: loading-grow 1.5s linear infinite;
+	transform: scale(0);
+	margin: -10px;
+}
+
+.loading-fade-out-effect {
+	animation: loading-fadeOut 5s ease-in-out forwards;
+}
+
+.loading-circle:nth-child(2) {
+    background-color: #253858;
+    animation-delay: 0.75s;
+}
+
+@keyframes loading-rotate {
+ 	to {
+ 		transform: rotate(360deg);
+ 	}
+}
+
+@keyframes loading-grow {
+	50% {
+		transform: scale(1);
+	}
+}
+
+@keyframes loading-fadeOut {
+	to {
+		opacity: 0;
+	}
+}

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper
+		namespace="classpath:mapper/UsersMapper.xml">
+		
+		<resultMap type="UserInfo" id="fetchUserDetailsMap">
+			<result property="userName" column="user_nm" />
+			<result property="passWord" column="user_pw" />
+			<result property="userRole" column="user_role" />
+			<result property="createdDt" column="created_dt" />
+		</resultMap>
+		
+		<select id="getUsersDetails" parameterType="java.util.Map" 
+			resultMap="fetchUserDetailsMap">
+			select * from users_tbl ut where user_nm = #{userName}
+		</select>
+</mapper>

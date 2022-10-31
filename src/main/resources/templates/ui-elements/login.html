@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="ISO-8859-1">
+	<link rel="stylesheet" type="text/css" th:href="@{/css/ui-elements/login.css}"/>
+	<script src="js/ui-elements/loading.js" th:src="@{/js/ui-elements/login.js}"></script>
+</head>
+<body>
+	<th:block th:fragment="login-form">
+<!-- 		<div class="additional-section"></div> -->
+	 	<div id="login-elements-container">
+	 		<div id="logo-container">
+				<img alt="AdminWebApp" class="web-main-logo" th:src="@{/images/logo.svg}">
+			</div>
+			<div id="login-form-container">
+				<input type="text" class="inputtext login-input" id="email" name="email" placeholder="Email or phone number" tabindex="0" aria-label="Email or phone number">
+				<input type="password" class="inputtext login-input" name="pass" id="pass" tabindex="0" placeholder="Password" aria-label="Password">
+				<button id="loginbutton" class="loginbutton" name="login" tabindex="0" type="submit">Login</button>
+			</div>
+	 	</div>
+	</th:block>
+</body>
+</html>

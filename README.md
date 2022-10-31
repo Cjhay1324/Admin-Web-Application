@@ -1,0 +1,1 @@
+10/31/2022 - Sinimulan with kuya Gab( Big G )
